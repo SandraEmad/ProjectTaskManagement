@@ -19,10 +19,8 @@ namespace ProjectTaskManagement.Infrastructure.Services
             _userManager = userManager;
             _jwtService = jwtService;
         }
-
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto dto)
         {
-
             if (await _userManager.FindByEmailAsync(dto.Email) != null)
                 throw new DomainException("Email already exists");
 
@@ -36,22 +34,16 @@ namespace ProjectTaskManagement.Infrastructure.Services
             };
 
             var result = await _userManager.CreateAsync(user, dto.Password);
-
             if (!result.Succeeded)
                 throw new DomainException(
                     string.Join(", ", result.Errors.Select(e => e.Description)));
 
             var role = dto.Role == "Admin" ? "Admin" : "User";
             await _userManager.AddToRoleAsync(user, role);
-            var result = await _userManager.CreateAsync(user, dto.Password);
-
-            if (!result.Succeeded)
-                throw new DomainException(
-                    string.Join(", ", result.Errors.Select(e => e.Description)));
 
             return new AuthResponseDto
             {
-                Token = _jwtService.GenerateToken(user),
+                Token = await _jwtService.GenerateToken(user), 
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Email = user.Email!
@@ -60,17 +52,15 @@ namespace ProjectTaskManagement.Infrastructure.Services
 
         public async Task<AuthResponseDto> LoginAsync(LoginDto dto)
         {
-
             var user = await _userManager.FindByEmailAsync(dto.Email)
                 ?? throw new UnauthorizedException();
-
 
             if (!await _userManager.CheckPasswordAsync(user, dto.Password))
                 throw new UnauthorizedException();
 
             return new AuthResponseDto
             {
-                Token = _jwtService.GenerateToken(user),
+                Token = await _jwtService.GenerateToken(user), 
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Email = user.Email!
