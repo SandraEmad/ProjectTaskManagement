@@ -3,18 +3,22 @@
 A scalable RESTful API built with ASP.NET Core 9, following Clean Architecture principles.
 
 ## Architecture Overview
+
+```
 ProjectTaskManagement/
-├── ProjectTaskManagement.API           # Controllers, Middleware, Program.cs
-├── ProjectTaskManagement.Application   # DTOs, Interfaces, Validators
-├── ProjectTaskManagement.Domain        # Entities, Enums, Exceptions
-└── ProjectTaskManagement.Infrastructure # DbContext, Services, Migrations
-### Layer Responsibilities
-- **Domain**: Core business entities, enums, and custom exceptions
-- **Application**: Business logic interfaces, DTOs, and FluentValidation validators
-- **Infrastructure**: EF Core DbContext, JWT service, and service implementations
-- **API**: Controllers, global exception middleware, and Swagger configuration
+├── ProjectTaskManagement.API           
+├── ProjectTaskManagement.Application   
+├── ProjectTaskManagement.Domain        
+└── ProjectTaskManagement.Infrastructure
+```
+
+- **API**: Controllers, Middleware, Program.cs
+- **Application**: DTOs, Interfaces, Validators
+- **Domain**: Entities, Enums, Exceptions
+- **Infrastructure**: DbContext, Services, Migrations
 
 ## Tech Stack
+
 - .NET 9 / ASP.NET Core Web API
 - Entity Framework Core + SQL Server
 - JWT Authentication
@@ -22,57 +26,60 @@ ProjectTaskManagement/
 - Swagger / OpenAPI
 
 ## Features
-- ✅ JWT Authentication (Register & Login)
-- ✅ Projects CRUD
-- ✅ Tasks Management
-- ✅ Role-based Authorization (Admin / User)
-- ✅ Global Exception Handling
-- ✅ Generic Response Wrapper
-- ✅ Input Validation
+
+- JWT Authentication (Register & Login)
+- Projects CRUD
+- Tasks Management
+- Role-based Authorization (Admin / User)
+- Global Exception Handling
+- Generic Response Wrapper
+- Input Validation
 
 ## Setup Instructions
 
-### Prerequisites
-- .NET 9 SDK
-- SQL Server or SQL Server Express
+**1. Clone the repository**
 
-### Steps
-
-1. **Clone the repository**
 ```bash
 git clone https://github.com/SandraEmad/ProjectTaskManagement.git
 cd ProjectTaskManagement
 ```
 
-2. **Update connection string**
+**2. Update connection string in appsettings.Development.json**
 
-Edit `appsettings.Development.json`:
 ```json
-"ConnectionStrings": {
-  "DefaultConnection": "Server=.\\SQLEXPRESS;Database=ProjectManagementDB;Trusted_Connection=True;TrustServerCertificate=True"
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.\\SQLEXPRESS;Database=ProjectManagementDB;Trusted_Connection=True;TrustServerCertificate=True"
+  }
 }
 ```
 
-3. **Run migrations**
+**3. Run migrations**
+
 ```bash
 dotnet ef database update --project ProjectTaskManagement.Infrastructure --startup-project ProjectTaskManagement.API
 ```
 
-4. **Run the project**
+**4. Run the project**
+
 ```bash
 cd ProjectTaskManagement.API
 dotnet run
 ```
 
-5. **Access Swagger**
+**5. Open Swagger**
+
+```
 https://localhost:7068/swagger
+```
+
 ## API Endpoints
 
 ### Auth
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | /api/auth/register | Register new user |
-| POST | /api/auth/login | Login and get JWT token |
+| POST | /api/auth/login | Login |
 
 ### Projects
 | Method | Endpoint | Description |
@@ -93,7 +100,8 @@ https://localhost:7068/swagger
 
 ## Authentication
 
-All endpoints except `/api/auth/*` require JWT token.
+All endpoints except `/api/auth/*` require JWT Bearer token.
 
-Include in request header: 
-Authorization: Bearer {token}
+```
+Authorization: Bearer {your_token}
+```
