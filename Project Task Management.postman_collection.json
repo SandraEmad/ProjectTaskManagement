@@ -15,7 +15,60 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"firstName\": \"Test\",\r\n  \"lastName\": \"User\",\r\n  \"email\": \"test@test.com\",\r\n  \"password\": \"Test123!\",\r\n  \"role\": \"User\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://localhost:7068/api/auth/register",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 19:52:42 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Registered successfully\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYwYjNiZWIzLTc1MTctNDg0Ny04M2M2LTViYTEwMmUzYTAyMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InRlc3RAdGVzdC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc4MDE3MDc2MSwiaXNzIjoiUHJvamVjdFRhc2tNYW5hZ2VtZW50QVBJIiwiYXVkIjoiUHJvamVjdFRhc2tNYW5hZ2VtZW50QVBJIn0.muHMKR0vKEhu_VD6qS2o04Ny4cAnp88D9II0Be9NsQ8\",\n        \"firstName\": \"Test\",\n        \"lastName\": \"User\",\n        \"email\": \"test@test.com\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Login",
@@ -23,7 +76,60 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \r\n  \"email\": \"test@test.com\",\r\n  \"password\": \"Test123!\"\r\n\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://localhost:7068/api/auth/login",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 19:54:43 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYwYjNiZWIzLTc1MTctNDg0Ny04M2M2LTViYTEwMmUzYTAyMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InRlc3RAdGVzdC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc4MDE3MDg4MywiaXNzIjoiUHJvamVjdFRhc2tNYW5hZ2VtZW50QVBJIiwiYXVkIjoiUHJvamVjdFRhc2tNYW5hZ2VtZW50QVBJIn0.Zxt3TZFfQfs-hS3Crn33vcyolhoSCD7N2Cndf_6qXlc\",\n        \"firstName\": \"Test\",\n        \"lastName\": \"User\",\n        \"email\": \"test@test.com\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         }
       ]
     },
@@ -36,7 +142,50 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Get All Projects",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://localhost:7068/api/projects",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "projects"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:00:01 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": \"e2d9a926-24ee-4254-b2ad-f7353af249c5\",\n            \"name\": \"My Project\",\n            \"description\": \"Project description\",\n            \"createdAt\": \"2026-05-23T19:58:41.6787805\"\n        }\n    ],\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Get Project By Id",
@@ -44,7 +193,51 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Get Project By Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://localhost:7068/api/projects/e2d9a926-24ee-4254-b2ad-f7353af249c5",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "projects",
+                    "e2d9a926-24ee-4254-b2ad-f7353af249c5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:01:20 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"e2d9a926-24ee-4254-b2ad-f7353af249c5\",\n        \"name\": \"My Project\",\n        \"description\": \"Project description\",\n        \"createdAt\": \"2026-05-23T19:58:41.6787805\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Create Project",
@@ -52,7 +245,63 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Create Project",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"My Project\",\r\n  \"description\": \"Project description\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://localhost:7068/api/projects",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "projects"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:07:01 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Location",
+                  "value": "https://localhost:7068/api/Projects/b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Project created\",\n    \"data\": {\n        \"id\": \"b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4\",\n        \"name\": \"My Project\",\n        \"description\": \"Project description\",\n        \"createdAt\": \"2026-05-23T20:07:02.1068501Z\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Update Project",
@@ -60,7 +309,60 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Update Project",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Updated Project\",\r\n  \"description\": \"Updated description\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://localhost:7068/api/projects/e2d9a926-24ee-4254-b2ad-f7353af249c5",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "projects",
+                    "e2d9a926-24ee-4254-b2ad-f7353af249c5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:01:46 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"e2d9a926-24ee-4254-b2ad-f7353af249c5\",\n        \"name\": \"Updated Project\",\n        \"description\": \"Updated description\",\n        \"createdAt\": \"2026-05-23T19:58:41.6787805\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Delete Project",
@@ -68,7 +370,51 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Delete Project",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "https://localhost:7068/api/projects/e2d9a926-24ee-4254-b2ad-f7353af249c5",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "projects",
+                    "e2d9a926-24ee-4254-b2ad-f7353af249c5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:02:36 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Deleted successfully\",\n    \"data\": null,\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         }
       ]
     },
@@ -81,7 +427,52 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Get Tasks By Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://localhost:7068/api/tasks/project/b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "project",
+                    "b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:09:14 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": \"d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56\",\n            \"title\": \"My Task\",\n            \"description\": \"Task description\",\n            \"status\": 1,\n            \"priority\": 1,\n            \"dueDate\": \"2026-12-01T00:00:00\",\n            \"createdAt\": \"2026-05-23T20:07:21.5845259\",\n            \"projectId\": \"b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4\"\n        }\n    ],\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Create Task",
@@ -89,7 +480,63 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Create Task",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"title\": \"My Task\",\r\n  \"description\": \"Task description\",\r\n  \"dueDate\": \"2026-12-01T00:00:00.000Z\",\r\n  \"priority\": 1,\r\n  \"projectId\": \"b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://localhost:7068/api/tasks",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "tasks"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:07:21 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Location",
+                  "value": "https://localhost:7068/api/Tasks/project/b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Task created\",\n    \"data\": {\n        \"id\": \"d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56\",\n        \"title\": \"My Task\",\n        \"description\": \"Task description\",\n        \"status\": 0,\n        \"priority\": 1,\n        \"dueDate\": \"2026-12-01T00:00:00Z\",\n        \"createdAt\": \"2026-05-23T20:07:21.5845259Z\",\n        \"projectId\": \"b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Update Task Status",
@@ -97,7 +544,61 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Update Task Status",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"status\": 1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://localhost:7068/api/tasks/d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56/status",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:08:16 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56\",\n        \"title\": \"My Task\",\n        \"description\": \"Task description\",\n        \"status\": 1,\n        \"priority\": 1,\n        \"dueDate\": \"2026-12-01T00:00:00\",\n        \"createdAt\": \"2026-05-23T20:07:21.5845259\",\n        \"projectId\": \"b5fa7c6e-1f62-4c15-b69a-78a323ad3ac4\"\n    },\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         },
         {
           "name": "Delete Task",
@@ -105,7 +606,51 @@
             "method": "GET",
             "header": []
           },
-          "response": []
+          "response": [
+            {
+              "name": "Delete Task",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "https://localhost:7068/api/tasks/d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56",
+                  "protocol": "https",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "7068",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "d9a83b51-e1f4-4ea9-839d-7fcb3cda5e56"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 23 May 2026 20:10:52 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Deleted successfully\",\n    \"data\": null,\n    \"errors\": null,\n    \"statusCode\": 200\n}"
+            }
+          ]
         }
       ]
     }
