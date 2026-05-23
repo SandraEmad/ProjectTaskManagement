@@ -1,0 +1,14 @@
+﻿using Microsoft.AspNetCore.Identity;
+namespace ProjectTaskManagement.Domain.Entities
+{
+    public class ApplicationUser : IdentityUser
+    {
+
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public ICollection<Project> Projects { get; set; } = new List<Project>();
+
+    }
+
+}
